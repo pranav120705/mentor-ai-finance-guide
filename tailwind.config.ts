@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// MoneyMentor Custom Colors
+				mentor: {
+					primary: '#5be7a9',    // Mint green
+					secondary: '#1b2a41',  // Navy blue
+					accent: '#f4c542',     // Gold
+					light: '#f9f9f9',      // Soft white
+					gray: '#e2e8f0',       // Light gray
+					success: '#10b981',    // Green for positive values
+					danger: '#ef4444',     // Red for negative values
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'typing': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
+				},
+				'bounce': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'pulse': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'typing': 'typing 2s steps(20, end)',
+				'bounce': 'bounce 1s infinite',
+				'pulse': 'pulse 1.5s infinite'
 			}
 		}
 	},
